@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
+#define SIZE 5
 
 class Queue{
 	int front, rear;
-	int myQueue[10];
+	int myQueue[SIZE];
 	public:
 		Queue(){
 			front = -1;
@@ -11,7 +12,7 @@ class Queue{
 		}
 	
 	bool isFull(){
-		if(rear == 9){
+		if(rear == SIZE-1){
 			return true;
 		}
 		return false;
@@ -26,7 +27,7 @@ class Queue{
 	
 	void enqueue(int data){
 		if(isFull()){
-			cout << "Stack is Full";
+			cout << "Stack is Full"<<endl;
 		}
 		else if (isEmpty()){
 			front++;
@@ -49,6 +50,8 @@ class Queue{
 			int data = myQueue[front];
 			front = front + 1;
 			
+			cout << data << "\t";
+			
 			return data;
 		}
 	}
@@ -61,5 +64,10 @@ int main(){
 	q.enqueue(20);
 	q.enqueue(30);
 	q.enqueue(40);
-	cout << q.dequeue();
+	q.enqueue(50);
+	q.enqueue(60);
+	cout << "Removed Elements : ";
+	q.dequeue();
+	q.dequeue();
+	q.dequeue();
 }
