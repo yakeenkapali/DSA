@@ -1,6 +1,6 @@
 #include <iostream>
-using namespace std;
 #define SIZE 5
+using namespace std;
 
 class CircularQueue{
 	
