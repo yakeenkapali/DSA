@@ -1,7 +1,3 @@
 # compilations
 *.exe
 !spec/*.exe
-
-# compilations
-*.dev
-!spec/*.dev
