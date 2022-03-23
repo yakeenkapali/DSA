@@ -110,6 +110,7 @@ class LinkedList{
 			}
 			
 			prevPtr->next = afterPtr->next;
+			delete afterPtr;
 		}
 	}
 	
@@ -126,7 +127,7 @@ class LinkedList{
 			}
 			
 			prevPtr->next = afterPtr->next;
-			
+			delete afterPtr;
 		}
 	}
 	
@@ -145,6 +146,7 @@ class LinkedList{
 			}
 			
 			ultraPrev->next = afterPtr;
+			delete prevPtr;
 			
 		}
 	}
