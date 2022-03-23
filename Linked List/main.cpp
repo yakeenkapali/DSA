@@ -110,25 +110,44 @@ class LinkedList{
 			}
 			
 			prevPtr->next = afterPtr->next;
-					
 		}
 	}
-	/*
+	
 	void deleteAfter(int d){
 		if(head == NULL){
 			cout << "Empty List";
 		}else{
-			afterPtr = head-next;
-			prevPtr = head;
+			Node* afterPtr = head->next;
+			Node* prevPtr = head;
 			
 			while(prevPtr->data != d){
 				prevPtr = prevPtr->next;
 				afterPtr = afterPtr->next; 
 			}
 			
+			prevPtr->next = afterPtr->next;
+			
 		}
 	}
-	*/
+	
+	void deleteBefore(int d){
+		if(head == NULL){
+			cout << "Empty list";
+		}else{
+			Node* ultraPrev = head;
+			Node* prevPtr = head->next;
+			Node* afterPtr = prevPtr->next;
+			
+			while(afterPtr->data != d){
+				ultraPrev = head->next;
+				prevPtr = prevPtr->next;
+				afterPtr = afterPtr->next;
+			}
+			
+			ultraPrev->next = afterPtr;
+			
+		}
+	}
 };
 
 int main(){
@@ -150,8 +169,14 @@ int main(){
 	
 	list.insertBefore(6, new Node(10));
 	list.traverse();
-	*/
+*/
 	
-	list.deleteNode(6);
+	//list.deleteNode(6);
+	//list.traverse();
+	
+	//list.deleteAfter(5);
+	//list.traverse();
+	
+	list.deleteBefore(6);
 	list.traverse();
 }
