@@ -98,7 +98,7 @@ class LinkedList{
 	}
 	
 	void deleteNode(int d){
-		if(head = NULL){
+		if(head == NULL){
 			cout << "No Such Data Found";
 		}else{
 			Node* afterPtr = head->next;
