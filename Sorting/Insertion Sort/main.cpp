@@ -21,23 +21,18 @@ class InsertionSort{
 			}
 		}
 		
-		void displayBeforeSort(){
-			for (int i = 0; i < MAX; i++) {
-  				cout << data[i] << " ";
-			}
-			cout << endl;
-		}
 		
-		void displayAfterSort(){
+		void printArray(){
 			for(int i=0; i<MAX; i++){
 				cout << data[i] << " ";
 			}
+			cout<< endl;
 		}
 };
 
 int main(){
 	InsertionSort sort;
-	sort.displayBeforeSort();
+	sort.printArray();
 	sort.insertionSort();
-	sort.displayAfterSort();
+	sort.printArray();
 }
