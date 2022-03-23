@@ -1,4 +1,7 @@
 # compilations
-*.exe *.dev
+*.exe
 !spec/*.exe
+
+# compilations
+*.dev
 !spec/*.dev

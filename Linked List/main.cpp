@@ -113,7 +113,7 @@ class LinkedList{
 					
 		}
 	}
-	
+	/*
 	void deleteAfter(int d){
 		if(head == NULL){
 			cout << "Empty List";
@@ -128,7 +128,7 @@ class LinkedList{
 			
 		}
 	}
-	
+	*/
 };
 
 int main(){
