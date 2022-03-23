@@ -1,4 +1,15 @@
 # compilations
 *.exe
+!spec/*.exe
+
 *.dev
+!spec/*.dev
+
+*.win
+!spec/*.win
+
+*.o
+!spec/*.o
+
 *.layout
+!spec/*.layout
